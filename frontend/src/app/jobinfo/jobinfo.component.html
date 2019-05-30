@@ -1,0 +1,30 @@
+<button class="se" type="submit" routerLink="/elist">SeekEmployees</button>
+<button class="lg" type="submit" (click)="logout()">LogOut</button> 
+
+<form [formGroup]="jobinfoForm">
+  <div class="container">
+
+    <p> Job description </p>
+    <hr>
+    <label><b>Organization Name</b></label>
+    <input class="inp" type="text" placeholder="Enter company name" formControlName="cname" id="in1" ><br>
+    <br>
+    <label><b>Job title</b></label>
+    <input class="inp" type="text" placeholder="Enter job title" formControlName="jtitle" id="in2" ><br>
+    <br>
+    <label><b>Job location</b></label>
+    <input ngx-google-places-autocomplete [options]='options' id="adrs" class="inp" placeholder="Select address" #placesRef="ngx-places"  (onAddressChange)="handleAddressChange($event)" /><br>
+    <br>
+    <label><b>Job Summary</b></label>
+    <input class="inp" type="text" placeholder="a brief details about job" formControlName="jsmry" id="in3" ><br>
+    <br>
+    <label><b>Exp. Required</b></label>
+    <input class="inp" type="number" placeholder="min 1 year" formControlName="exp" id="in4" >
+   
+    <hr>
+    <button class="sm" type="submit" (click)="addjobinfo()" [disabled]="!jobinfoForm.valid" >Submit</button>
+    <button class="cl" type="reset">Erase record</button>
+
+  </div>
+</form> 
+

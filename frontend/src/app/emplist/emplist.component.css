@@ -1,0 +1,26 @@
+.hr
+{
+    background-color: #E1F2FA;
+    width: 30%;
+}
+
+.sm{
+    background-color: rgb(231, 71, 71);
+    color: rgb(245, 248, 244);
+    padding: 8px 14px;    
+    margin:15px 15px; 
+    border: none;
+    cursor: pointer;    
+    opacity: 0.9;
+}
+
+.btn{
+    background-color: rgb(39, 68, 236);
+    color: rgb(245, 248, 244);
+    padding: 8px 14px;    
+    margin:15px 15px; 
+    border: none;
+    cursor: pointer;    
+    opacity: 0.9;
+}
+

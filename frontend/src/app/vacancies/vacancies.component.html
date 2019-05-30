@@ -1,0 +1,58 @@
+<div class="container h-101">
+  <form [formGroup]="searchdata">
+    <div class="d-flex justify-content-center h-100">
+      <div class="searchbar">
+        <input class="search_input" type="text" name="" placeholder="Search jobs here..." formControlName="Search">
+        <a  class="search_icon" (click)="Search()"><i class="fas fa-search"></i></a>
+      </div>
+    </div>
+  </form>
+  
+</div>
+
+
+<button class="lg" type="submit" (click)="logout()">LogOut</button>
+<button class="in" type="submit" routerLink="/get">CallLetters!</button>
+
+<div *ngIf="showform">
+<form [formGroup]="specForm">
+  <div class="container el">
+
+    Select File to upload:
+    <input type="file" name="fileToUpload" (change)="onchangefile($event)" id="fileToUpload">
+    <button (click)="uploadFile()" id="upl">Upload</button>
+    <br><br><br>
+    <label for="flname"><b>Name</b></label>
+    <input class="inp" type="text" placeholder="Enter your full name" formControlName="name" id="sn">
+    <br>
+    <label for="mjrSkill"><b>Specialization</b></label>
+    <input class="inp" type="text" placeholder="e.g Web/java developer" formControlName="splz" id="sz">
+    <br>
+    <label for="exp"><b>Experience</b></label>
+    <input class="inp" type="text" placeholder="Enter experience" formControlName="exp" id="ex">
+    <br>
+    <label for="comm"><b>Contact</b></label>
+    <input class="inp" type="number" placeholder="enter mob. number" formControlName="contact" id="sc">
+    <br>
+    <hr>
+
+    <button class="rg" type="submit" (click)="vaclist()" [disabled]="!specForm.valid" routerLink="/vlist">Go find
+      vacancies</button>
+    <button class="cl" type="reset">Erase record</button>
+
+  </div>
+</form>
+</div>
+
+<div *ngIf="showsearchdata"> 
+<div class="hr" *ngFor="let i of searchdatavalue"> 
+  <h2>{{i.cname}}</h2>
+  <h4>Job title: <small> {{i.jtitle}}</small></h4>
+  <h4>Role: <small> {{i.jsmry}}</small></h4>
+  <h4>Address: <small> {{i.adrs}}</small></h4>
+  <h4>Exp. required(in yrs): <small> {{i.exp}}</small></h4>
+</div>
+<button class="btn" (click)="back()">Back</button>
+
+</div>
+

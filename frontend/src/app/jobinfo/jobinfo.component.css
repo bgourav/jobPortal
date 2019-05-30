@@ -1,0 +1,85 @@
+
+.cl{
+    background-color: rgb(236, 60, 54);
+    color: rgb(245, 248, 244);
+    padding: 6px 12px;    
+    margin: 5px 5px; 
+    border: none;
+    cursor: pointer;    
+    opacity: 0.9;
+}
+
+.sm{
+    background-color: rgb(50, 160, 65);
+    color: rgb(245, 248, 244);
+    padding: 6px 12px;    
+    margin:15px 15px; 
+    border: none;
+    cursor: pointer;    
+    opacity: 0.9;
+}
+.container{
+    clear: both;
+    border: 3px solid rgb(10, 93, 189);
+    background-color: rgb(211, 245, 196);
+    width: 40%;
+    padding: 12px;
+    margin-left:26%;
+    margin-top:14px;
+}
+.inp{
+    width: 50%;
+    padding: 7px;
+    margin-left:5%;
+    left: 180px;
+    background-color: rgb(230, 252, 248);  
+}
+
+#in1
+{
+    position:relative;
+    left:6px;
+}
+#in2
+{
+    position:relative;
+    left:90px;
+}
+#in3
+{
+    position:relative;
+    left:44px;
+}
+#in4{
+    position:relative;
+    left:42px;
+}
+#adrs
+{
+    position:relative;
+    left:57px;
+}
+
+.lg{
+    background-color: rgb(228, 27, 13);
+    color: rgb(245, 248, 244);
+    padding: 8px 14px;    
+    margin:30px 900px; 
+    border: none;
+    cursor: pointer;    
+    opacity: 0.9; 
+    position:relative;
+
+}
+.se{
+    background-color: rgb(4, 128, 252);
+    color: rgb(245, 248, 244);
+    padding: 8px 14px;    
+    margin:30px 743px; 
+    border: none;
+    cursor: pointer;    
+    opacity: 0.9; 
+    position:absolute;
+}
+
+

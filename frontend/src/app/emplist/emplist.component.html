@@ -1,0 +1,16 @@
+<div>
+  <button class="btn" (click) = "back()">Back</button>
+
+<div class="hr" *ngFor="let i of postdetails"> 
+ 
+  <h4>Name: <small> {{i.name}}</small></h4>
+  <h4>Specialization: <small> {{i.splz}}</small></h4>
+  <h4>Exp (in yrs): <small> {{i.exp}}</small></h4>
+  <h4>Contact: <small> {{i.contact}}</small></h4>
+  <h4>{{i.upld}}</h4>
+
+  <button class="sm" type="submit" (click) = "hire(i._id)"><b>Hire now !</b></button>
+
+</div>
+</div>
+

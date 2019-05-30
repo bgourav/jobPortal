@@ -1,0 +1,11 @@
+   <button class="btn" (click) = "back()">Back</button>
+
+<div *ngIf="data.length">
+  <div *ngFor="let d of data">
+    <h2>{{d.cname}}</h2>
+    <h4>{{d.jtitle}}</h4>
+    <h4>{{d.adrs}}</h4>
+
+  </div>
+</div>
+

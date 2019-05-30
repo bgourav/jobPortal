@@ -1,0 +1,59 @@
+<div>
+    <img src="../assets/images/portalicon.png" alt="logo" width="100" height="110">
+    <div><p id="txt" style=" color: rgb(4, 128, 252)"><b>Welcome<br>to<br>job<br>Mania !!</b></p>
+   
+    </div>
+
+<div class="container login-container">
+            <div class="row">
+                <div class="col-md-6 login-form-1" *ngIf="signIn1">
+                    <h3>Login as Seeker</h3>
+                    <form [formGroup]="sloginForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Enter username" formControlName="username" required="" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Your Password" formControlName="psw" required="" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btnSubmit" (click)="slogin()" [disabled]="!sloginForm.valid" value="Login" />
+                            <input type="submit" class="btnSubmit" routerLink="/registration" value="Signup" />
+                        </div>
+                        <div class="form-group">
+                            <a (click)="forgetpass1()" class="ForgetPwd">Forget Password?</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 login-form-2" *ngIf="signIn2">
+                    <h3>Login as Provider</h3>
+                    <form [formGroup]="ploginForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Enter username" formControlName="username" required="" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Your Password" formControlName="psw" required="" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btnSubmit" (click)="plogin()" [disabled]="!ploginForm.valid" value="Login" />
+                            <input type="submit" class="btnSubmit" routerLink="/registration" value="Signup" />
+
+                        </div>
+                        <div class="form-group"> 
+
+                            <a (click)="forgetpass2()" class="ForgetPwd" >Forget Password?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+                <div class="loginfo" *ngIf="forgot">
+                    <form [formGroup]="forgotpass" (ngSubmit)="forgotData()">
+                      <br><br><b>Email:</b><input type="email" class="form-control" placeholder="email" formControlName="email" ><br>
+                      <input type="submit" class="btn" value="Reset"><br>
+                    </form>
+                    <button class="btn" onClick="window.location.reload();">Back</button>
+                </div>
+        
+    </div>
+</div>
+    
